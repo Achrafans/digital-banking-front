@@ -1,3 +1,5 @@
+import { Customer } from "./customer.model";
+
 export interface AccountDetails{
   accountId: string;
   balance: number;
@@ -14,4 +16,15 @@ export interface AccountOperation{
   type: string;
   description: string;
 
+}
+
+export interface BankAccount{
+  id: number;
+  balance: number;
+  createdAt: Date;
+  status: string;
+  type:string;
+  customerDTO: Customer;
+  overdraft?: number;
+  interestRate?: number;
 }

@@ -5,6 +5,7 @@ import { CustomerService } from '../services/customer.service';
 import { catchError, Observable, throwError } from 'rxjs';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { map } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -19,7 +20,8 @@ export class CustomersComponent {
 
   constructor(
     private customerService: CustomerService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private router: Router
 
   ){}
 
@@ -61,6 +63,10 @@ export class CustomersComponent {
       console.error(err);
     }
   });
+}
+
+handleCustomerAccounts(customer: Customer){
+  this.router.navigateByUrl('/customer-accounts/'+customer.id, {state: customer});
 }
 
 

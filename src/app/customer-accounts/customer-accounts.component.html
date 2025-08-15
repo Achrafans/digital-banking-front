@@ -1,0 +1,32 @@
+<div class="container mt-2">
+
+<div class="card">
+  <div class="card-header">Accounts : <strong>{{customer.name}}</strong></div>
+  <div class="card-body">
+
+      <table class="table table-striped">
+      <thead class="thead-dark">
+        <th>Id</th> <th>Balance</th> <th>CreatedAt</th> <th>Type</th> <th>Overdraft</th> <th>interestRate</th><th></th>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let ac of listAccounts" >
+          <td>{{ac.id}}</td>
+          <td>{{ac.balance}}</td>
+          <td>{{ac.createdAt}}</td>
+          <td>{{ac.type}}</td>
+          <td>{{ac.overdraft ? ac.overdraft : "---"}}</td>
+          <td>{{ac.interestRate ? ac.interestRate: "---"}}</td>
+          <td>
+            <button (click)="goToOperations(ac)" class="btn btn-success">Operations</button>
+          </td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+ </div>
+
+</div>
+

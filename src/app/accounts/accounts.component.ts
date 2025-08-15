@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { AccountsService } from '../services/accounts.service';
 import { catchError, Observable, throwError } from 'rxjs';
-import { AccountDetails } from '../model/account.model';
+import { AccountDetails, BankAccount } from '../model/account.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-accounts',
@@ -16,11 +17,29 @@ pageSize: number =5;
 accountObservable!: Observable<AccountDetails>;
 operationFormGroup!: FormGroup;
 errorMessage!: string;
+accountId!: string;
 
   constructor(
     private fb: FormBuilder,
-    private accountService: AccountsService
-  ){}
+    private accountService: AccountsService,
+    private router: Router
+  ){
+
+    const nav = this.router.getCurrentNavigation();
+    this.accountId = nav?.extras.state?.['accountId'] || '';
+    console.log('Account ID reçu:', this.accountId);
+
+   this.accountFormGroup = this.fb.group({
+    accountId: this.fb.control(this.accountId)
+  });
+
+    if(this.accountId){
+      this.handleSearchAccount();
+    }
+}
+
+
+
 
   ngOnInit(): void {
     this.accountFormGroup = this.fb.group({
