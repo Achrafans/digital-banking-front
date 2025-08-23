@@ -76,7 +76,7 @@
       <div class="card-header">
         Operations
       </div>
-      <div class="card-body">
+      <div class="card-body" *ngIf="authService.roles.includes('ADMIN')">
         <form [formGroup]="operationFormGroup" method="post" (ngSubmit)="handleAccountOperation()">
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" formControlName="operationType" value="DEBIT" id="debit">

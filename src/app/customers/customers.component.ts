@@ -66,7 +66,7 @@ export class CustomersComponent {
 }
 
 handleCustomerAccounts(customer: Customer){
-  this.router.navigateByUrl('/customer-accounts/'+customer.id, {state: customer});
+  this.router.navigateByUrl('/admin/customer-accounts/'+customer.id, {state: customer});
 }
 
 

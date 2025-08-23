@@ -1,3 +1,4 @@
+import { AuthService } from './../services/auth.service';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { AccountsService } from '../services/accounts.service';
@@ -22,7 +23,8 @@ accountId!: string;
   constructor(
     private fb: FormBuilder,
     private accountService: AccountsService,
-    private router: Router
+    private router: Router,
+    public authService: AuthService
   ){
 
     const nav = this.router.getCurrentNavigation();
