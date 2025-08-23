@@ -38,7 +38,7 @@ export class CustomerAccountsComponent {
   }
 
   goToOperations(account: BankAccount){
-    this.router.navigateByUrl("/accounts", {state:{accountId: account.id}})
+    this.router.navigateByUrl("/admin/accounts", {state:{accountId: account.id}})
 
   }
 

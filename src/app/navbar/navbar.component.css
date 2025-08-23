@@ -1,0 +1,39 @@
+.logo-img {
+  width: 8%;
+}
+
+.user-dropdown .nav-link {
+  font-weight: 600;
+   color: #000000a6 !important;
+}
+
+.user-dropdown .nav-link::before {
+  content: "👤";
+  margin-right: 6px;
+  font-size: 1rem;
+}
+
+.user-dropdown-menu {
+  min-width: 160px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.user-dropdown-menu .dropdown-item {
+  color: #ddd;
+}
+
+.user-dropdown-menu .dropdown-item:hover {
+  background-color: #F8F9FA;
+  color: #000000a6;
+}
+
+.user-dropdown-menu .logout-item {
+  color: #dc3545 !important;
+  font-weight: 500;
+}
+
+.bg-custom{
+  background-color: #F8F9FA;
+}
+

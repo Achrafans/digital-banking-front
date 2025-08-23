@@ -25,3 +25,31 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+📌 E-Banking Application
+
+Une application E-Banking permettant aux clients de se connecter, gérer leurs informations et effectuer différentes opérations bancaires en toute sécurité.
+
+🚀 Fonctionnalités
+
+🔐 Authentification sécurisée (Login / Logout)
+
+👤 Gestion des clients (ajout, modification, recherche, suppression)
+
+💳 Opérations bancaires (dépôt, retrait, virement)
+
+📊 Suivi des comptes en temps réel
+
+🛡️ Sécurité JWT pour les appels API
+
+🖼️ Captures d’écran
+🔑 Page de connexion
+### Login
+![Login Page](./src/assets/images/login.png)
+
+👤 Gestion des clients
+![Customers Page](./src/assets/images/customers.png)
+
+💳 Opérations bancaires
+![Operations Page](./src/assets/images/operations.png)
+
