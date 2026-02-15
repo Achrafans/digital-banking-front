@@ -1,39 +1,53 @@
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  margin-left: 250px;
+}
+
 .logo-img {
-  width: 8%;
+  width: 35px;
 }
 
-.user-dropdown .nav-link {
+.brand {
+  font-size: 1.3rem;
   font-weight: 600;
-   color: #000000a6 !important;
 }
 
-.user-dropdown .nav-link::before {
-  content: "👤";
-  margin-right: 6px;
-  font-size: 1rem;
-}
-
-.user-dropdown-menu {
-  min-width: 160px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-
-.user-dropdown-menu .dropdown-item {
-  color: #ddd;
-}
-
-.user-dropdown-menu .dropdown-item:hover {
-  background-color: #F8F9FA;
+.nav-link {
   color: #000000a6;
+  font-weight: 500;
+  border-radius: 8px;
+  margin-bottom: 5px;
 }
 
-.user-dropdown-menu .logout-item {
-  color: #dc3545 !important;
+.nav-link:hover,
+.nav-link.active {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.sidebar-footer {
+  margin-top: auto;
+}
+
+.dropdown-menu {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.logout-item {
+  color: #dc3545;
   font-weight: 500;
 }
 
-.bg-custom{
+.bg-custom {
   background-color: #F8F9FA;
 }
-

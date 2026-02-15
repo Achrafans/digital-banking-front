@@ -9,7 +9,9 @@ import { Router } from '@angular/router';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-formLogin!: FormGroup;
+  formLogin!: FormGroup;
+  errorMessage: string | null = null;
+
   constructor(private fb: FormBuilder,
     private authService: AuthService,
     private router: Router
@@ -24,6 +26,7 @@ formLogin!: FormGroup;
   }
 
   handleLogin(){
+    this.errorMessage = null;
     console.log("formLogin ==>",this.formLogin.value);
     let username = this.formLogin.value.username;
     let password = this.formLogin.value.password;
@@ -32,10 +35,11 @@ formLogin!: FormGroup;
       next: (data)=> {
         console.log("data ==>",data);
         this.authService.loadProfile(data);
-        this.router.navigateByUrl("/admin");
+        this.router.navigateByUrl("/admin/customers");
       },
       error:(err)=>{
-        console.log(err)
+        console.log(err);
+        this.errorMessage = "Incorrect username or password !";
 
       }
     })

@@ -16,7 +16,7 @@ import { Router } from '@angular/router';
 export class CustomersComponent {
   customers!: Observable<Customer[]>;
   errorMessage!: string ;
-  searchFormGroup: FormGroup | undefined;
+  searchFormGroup!: FormGroup;
 
   constructor(
     private customerService: CustomerService,
