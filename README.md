@@ -48,8 +48,8 @@ Une application E-Banking permettant aux clients de se connecter, gérer leurs i
 ![Login Page](./src/assets/images/login.png)
 
 👤 Gestion des clients
-![Customers Page](./src/assets/images/customers.png)
+![Customers Page](./src/assets/images/customers_v2.png)
 
 💳 Opérations bancaires
-![Operations Page](./src/assets/images/operations.png)
+![Operations Page](./src/assets/images/operations_v2.png)
 
